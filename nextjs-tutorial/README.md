@@ -389,7 +389,6 @@ const fetchDrinks = async () => {
   const data = await response.json();
   return data;
 };
-
 const DrinksPage = async () => {
   const data = await fetchDrinks();
   console.log(data);
