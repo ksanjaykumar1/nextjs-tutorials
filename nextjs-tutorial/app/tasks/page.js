@@ -1,5 +1,13 @@
-const Tasks = () => {
-  return <div>Tasks</div>;
+import TaskForm from '@/components/TaskForm';
+import TaskList from '@/components/TaskList';
+
+const TaskPage = async() => {
+  return (
+    <div className='max-w-lg'>
+      <TaskForm />
+      <TaskList />
+    </div>
+  );
 };
 
-export default Tasks;
+export default TaskPage;
