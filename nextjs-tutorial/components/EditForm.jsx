@@ -1,5 +1,14 @@
-import { editTask } from "@/utils/action";
+import { editTask } from '@/utils/action';
+import { useFromStatus } from 'react-dom';
 
+const SubmitButton = () => {
+  const { pending } = useFromStatus();
+  return (
+    <button className='btn btn-primary btn-block btn-sm' disabled={pending}>
+      {pending ? 'pending...' : edit}
+    </button>
+  );
+};
 const EditForm = ({ task }) => {
   const { id, completed, content } = task;
   return (
@@ -30,7 +39,7 @@ const EditForm = ({ task }) => {
           />
         </label>
       </div>
-      <button className='btn btn-primary btn-block btn-sm'>edit</button>
+      <SubmitButton />
     </form>
   );
 };
