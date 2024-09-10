@@ -1,6 +1,6 @@
 import SidebarHeader from './SidebarHeader';
-// import NavLinks from './NavLinks';
-// import MemberProfile from './MemberProfile';
+import NavLinks from './NavLinks';
+import MemberProfile from './MemberProfile';
 
 const Sidebar = () => {
   return (
@@ -8,9 +8,9 @@ const Sidebar = () => {
       {/* first row */}
       <SidebarHeader />
       {/* second row */}
-      {/* <NavLinks /> */}
+      <NavLinks />
       {/* third row */}
-      {/* <MemberProfile /> */}
+      <MemberProfile />
     </div>
   );
 };
